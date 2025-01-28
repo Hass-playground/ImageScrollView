@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scroll image</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    #scroll{
+      margin: 50px 50px;
+      width: 300px;
+      height: 210px;
+      background-color: #9fea9f;
+      white-space: nowrap;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      font-size: 0;
+    }
+    #scroll>div{
+      display: inline-block;
+      width: 300px;
+      height: 200px;
+      border:1px solid black;
+      scroll-snap-align: center;
+      /*vertical-align: bottom;*/
+      white-space: nowrap;
+      font-size: 1rem;
+
+      h4{
+        background-color: rgba(255, 255, 0, 0.73);
+        width: 20px;
+        height: 100%;
+        writing-mode: vertical-lr;
+        /*writing-mode: sideways-lr;*/
+        text-orientation: mixed;
+        text-align: center;
+        position: sticky;
+        left: 0;
+        display: inline-block;
+        white-space: none;
+      }
+
+      img{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+        margin-left: -23px;
+        white-space: none;
+
+
+
+      };
+
+    }
+  </style>
+</head>
+<body>
+<h1>Image Scroll View</h1>
+<div id="scroll">
+  <div>
+    <h4>Image 1</h4>
+    <img src="img/car1.jpg">
+  </div>
+  <div >
+    <h4>Image 2</h4>
+    <img src="img/car2.jpg">
+  </div>
+  <div >
+    <h4>Image 3</h4>
+    <img src="img/car3.jpg">
+  </div>
+  <div>
+    <h4>Image 4</h4>
+    <img src="img/car4.jpg">
+  </div>
+</div>
+
+</body>
+</html>
